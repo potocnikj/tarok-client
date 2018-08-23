@@ -14,6 +14,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTabsModule,
     MatMenuModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatInputModule,
+    MatStepperModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -36,7 +42,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTabsModule,
     MatMenuModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatInputModule,
+    MatStepperModule
   ],
   bootstrap: []
 })
