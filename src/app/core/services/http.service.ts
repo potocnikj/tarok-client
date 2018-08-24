@@ -11,6 +11,10 @@ export class HttpService {
               private router: Router) {
   }
 
+  /**
+   * Handles HTTP Error responses by Invoking toast to inform user.
+   * @param {HttpErrorResponse} error
+   */
   public handleError(error: HttpErrorResponse): void {
     this.toastService.addToast(
       'Napaka',
