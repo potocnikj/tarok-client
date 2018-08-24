@@ -1,10 +1,10 @@
-
-<mat-card>
+<mat-card *ngIf="authentication">
   <mat-form-field class="fullwidth">
-    <input matInput placeholder="Team">
+    <input matInput placeholder="Team" [(ngModel)]="authentication.teamId">
   </mat-form-field>
 
   <mat-form-field class="fullwidth">
-    <input matInput placeholder="Passphrase" type="password">
+    <input matInput placeholder="Passphrase" type="password" [(ngModel)]="authentication.passphrase">
   </mat-form-field>
+  <button mat-raised-button color="primary" (click)="authenticate()">Vpis</button>
 </mat-card>

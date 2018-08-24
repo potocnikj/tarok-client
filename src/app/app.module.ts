@@ -8,7 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 /**
  * Material
  */
-import { MaterialModule } from "./material/material.module";
+import { MaterialModule } from './material/material.module';
 /**
  * Routing
  */
@@ -19,18 +19,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './core/components/register/register.component';
 import { LoginComponent } from './core/components/login/login.component';
+import { DashboardComponent } from './core/components/dashboard/dashboard.component';
+/**
+ * Guards
+ */
+import { AuthGuard } from './core/guards/auth.guard';
+import { LoginGuard } from './core/guards/login.guard';
 /**
  * Services
  */
-import { HttpService } from "./core/services/http.service";
-import { ToastService } from "./core/services/toast.service";
-import { AuthenticationService } from "./core/services/authentication.service";
+import { HttpService } from './core/services/http.service';
+import { ToastService } from './core/services/toast.service';
+import { AuthenticationService } from './core/services/authentication.service';
+import { LanguageService } from './core/services/language.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,10 @@ import { AuthenticationService } from "./core/services/authentication.service";
   providers: [
     HttpService,
     ToastService,
-    AuthenticationService
+    AuthGuard,
+    LoginGuard,
+    AuthenticationService,
+    LanguageService
   ],
   bootstrap: [AppComponent]
 })
